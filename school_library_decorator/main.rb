@@ -15,3 +15,8 @@ end
 
 def create_book
 end
+
+# To Create a rental create_book method:
+
+def create_renatl
+end
