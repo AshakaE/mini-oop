@@ -6,6 +6,13 @@ require_relative './person.rb'
 require_relative './rental.rb'
 require_relative './student.rb'
 require_relative './teacher.rb'
+
+# To start the app Empty Arrays
+def initialize
+  @books = []
+  @people = []
+  @rentals = []
+end
 # To show all books all_books method:
 def all_books; end
 
