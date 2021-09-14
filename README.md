@@ -1,29 +1,31 @@
-# Mini OOP
+# OOP school library: add basic UI
 
-> A simple OOP project to mimic a school library.
+> In this project, I created a form of UI for a school library app. This way it can be invoked as an executable and not something we can use in IRB exclusively.
 
 ## Built With
 
 - Ruby
 
-## Getting Started
-
-- TBA
-
 ### Prerequisites
 
 - Ruby
+- Visual Studio Code
 
 ### Run tests
 
 - TBA
 
-## Author
+## Authors
 
 👤 **Ashaka Egerega**
 
 - GitHub: [@AshakaE](https://github.com/AshakaE)
 - LinkedIn: [AshakaE](https://www.linkedin.com/in/AshakaE/)
+
+👤 **Arslan Bisharat**
+
+- GitHub: [@Arslan Bisharat](https://github.com/ArslanBisharat)
+- LinkedIn: [Arslan Bisharat](https://www.linkedin.com/in/ArslanBisharat)
 
 ## 🤝 Contributing
 
@@ -37,7 +39,7 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-Copyright 2021 Ashaka Egerega
+Copyright 2021 @ Microverse
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
