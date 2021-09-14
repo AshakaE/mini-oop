@@ -1,4 +1,4 @@
-#importing other files 
+# Importing other files 
 require_relative './book.rb'
 require_relative './classroom.rb'
 require_relative './corrector.rb'
@@ -8,11 +8,12 @@ require_relative './student.rb'
 require_relative './teacher.rb'
 
 # To start the app Empty Arrays
-def initialize
+Class Main
+  def initialize
   @books = []
   @people = []
   @rentals = []
-end
+  end
 # To show all books all_books method:
 def all_books; end
 
@@ -30,7 +31,7 @@ def create_renatl; end
 
 # To show all rentals all_rentals method:
 def all_rentals; end
-
+end
 # To invoke main.rb
 def main
   puts 'Hello there,'
