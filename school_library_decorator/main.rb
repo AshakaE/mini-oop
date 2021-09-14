@@ -7,16 +7,17 @@ def all_people
 end
 
 # To create person create_person method: 
-
 def create_person
 end
 
 # To Create a book create_book method:
-
 def create_book
 end
 
 # To Create a rental create_book method:
-
 def create_renatl
+end
+
+# To show all rentals all_rentals method: 
+def all_rentals
 end
