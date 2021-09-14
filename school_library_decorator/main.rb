@@ -1,3 +1,11 @@
+#importing other files 
+require_relative './book.rb'
+require_relative './classroom.rb'
+require_relative './corrector.rb'
+require_relative './person.rb'
+require_relative './rental.rb'
+require_relative './student.rb'
+require_relative './teacher.rb'
 # To show all books all_books method:
 def all_books; end
 
