@@ -1,10 +1,10 @@
-# To show all books all_books method: 
-def all_books   
+# To show all books all_books method:
+def all_books
 end
-# To list all people all_people method: 
+# To list all people all_people method:
 def all_people
 end
-# To create person create_person method: 
+# To create person create_person method:
 def create_person
 end
 # To Create a book create_book method:
@@ -13,7 +13,7 @@ end
 # To Create a rental create_book method:
 def create_renatl
 end
-# To show all rentals all_rentals method: 
+# To show all rentals all_rentals method:
 def all_rentals
 end
 # To invoke main.rb
@@ -29,9 +29,8 @@ def main
     puts '6- List all Rentals for a given Person id'
     puts '7- Exit'
     puts ' '
-    puts 'Do you want to Create a Student (1) or a teacher (2)?' 
+    puts 'Do you want to Create a Student (1) or a teacher (2)?'
     number = gets.chomp
-  
     puts number
 end
 
