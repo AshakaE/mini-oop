@@ -22,7 +22,7 @@ end
 def all_rentals
 end
 
-
+# To invoke main.rb
 def main
     puts "Hello there,"
     puts "Welcome to Basic UI of School Libraray App!"
@@ -37,9 +37,10 @@ def main
     puts "7- Exit"
     puts " "
     
-    print "Do you want to Create a Student (1) or a teacher (2)?" 
+    puts "Do you want to Create a Student (1) or a teacher (2)?" 
     number = gets.chomp
   
     puts number
-  
-  end
+end
+
+main()
