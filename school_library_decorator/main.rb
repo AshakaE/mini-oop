@@ -10,3 +10,8 @@ end
 
 def create_person
 end
+
+# To Create a book create_book method:
+
+def create_book
+end
