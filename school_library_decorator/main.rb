@@ -5,3 +5,8 @@ end
 # To list all people all_people method: 
 def all_people
 end
+
+# To create person create_person method: 
+
+def create_person
+end
