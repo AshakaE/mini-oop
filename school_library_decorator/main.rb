@@ -39,7 +39,6 @@ class Main
   def create_person
     puts 'Do you want to create a student or a teacher?'
     puts 'For student press 1 and for teacher press 2'
-    puts ' '
     entry = gets.chomp
 
     case entry
@@ -119,45 +118,45 @@ class Main
   end
 end
 
-  # To invoke main.rb
+# To invoke main.rb
 def main
   app = App.new
-  selection = nil
+  entry = nil
 
-    while selection != '7'
-      puts 'Hello there,'
-      puts 'Welcome to Basic UI of School Libraray App!'
-      puts 'Please choose an option by entering a number:'
-      puts '1- List all books.'
-      puts '2- List all People.'
-      puts '3- Create a Person.'
-      puts '4- Create a Book.'
-      puts '5- Create a Rental.'
-      puts '6- List all Rentals for a given Person id.'
-      puts '7- Exit.'
-      puts 'Do you want to Create a Student or a teacher?'
-      puts 'Select 1 for teacher and select 2 for teacher.'
-      number = gets.chomp
-      puts number
+  while selection != '7'
+    puts 'Hello there,'
+    puts 'Welcome to Basic UI of School Libraray App!'
+    puts 'Please choose an option by entering a number:'
+    puts '1- List all books.'
+    puts '2- List all People.'
+    puts '3- Create a Person.'
+    puts '4- Create a Book.'
+    puts '5- Create a Rental.'
+    puts '6- List all Rentals for a given Person id.'
+    puts '7- Exit.'
+    puts 'Do you want to Create a Student or a teacher?'
+    puts 'Select 1 for teacher and select 2 for teacher.'
+    number = gets.chomp
+    puts number
 
-    case selection
-        when '1'
-          app.all_books
-        when '2'
-          app.all_people
-        when '3'
-          app.create_person
-        when '4'
-          app.create_book
-        when '5'
-          app.create_rental
-        when '6'
-          app.all_rentals
-        when '7'
-          puts 'Thank you for using the app!'
-    end
-      puts "\n"
-    end
+  case entry
+    when '1'
+      app.all_books
+    when '2'
+      app.all_people
+    when '3'
+      app.create_person
+    when '4'
+      app.create_book
+    when '5'
+      app.create_rental
+    when '6'
+      app.all_rentals
+    when '7'
+      puts 'Thank you for using the app!'
   end
+    puts "\n"
+  end
+end
 
 main
