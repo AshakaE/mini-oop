@@ -1,3 +1,6 @@
+require_relative "./student"
+require_relative "./teacher"
+
 # Creating class to have blueprints for objects
 class App
   def initialize
