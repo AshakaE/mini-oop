@@ -130,7 +130,7 @@ def main
     entry = gets.chomp
     puts entry
 
-  case entry
+    case entry
     when '1'
       app.all_books
     when '2'
@@ -145,9 +145,9 @@ def main
       app.all_rentals
     when '7'
       puts 'Thank you for using the app!'
-  end
+    end
     puts "\n"
   end
 end
 
-main()
+main
