@@ -1,5 +1,7 @@
 require_relative "./student"
 require_relative "./teacher"
+require_relative "./book"
+require_relative "./rental.rb"
 
 # Creating class to have blueprints for objects
 class App
