@@ -57,7 +57,7 @@ class App
       puts 'Teacher has been created successfully'
 
     else
-      puts 'invalid selection.'
+      puts 'Invalid Enrty.'
       puts 'Select 1 for student and 2 for teacher'
       nil
     end
@@ -112,9 +112,9 @@ end
 # To invoke main.rb
 def main
   app = App.new
-  selection = nil
+  entry = nil
 
-  while selection != '7'
+  while entry != '7'
     puts 'Hello there,'
     puts 'Welcome to Basic UI of School Libraray App!'
     puts 'Please choose an option by entering a number:'
