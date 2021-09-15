@@ -15,7 +15,13 @@ Class Main
   @rentals = []
   end
 # To show all books all_books method:
-def all_books; end
+  def all_books
+    if @books.length.positive?
+      @books.each { |book| puts "title: #{book.title}, Author: #{book.author}" }
+    else
+      puts 'Sorry, We cannot find any book!!'
+    end
+  end
 
 # To list all people all_people method:
 def all_people; end
