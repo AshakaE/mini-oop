@@ -121,7 +121,7 @@ end
 # To invoke main.rb
 def main
   app = App.new
-  entry = nil
+  selection = nil
 
   while selection != '7'
     puts 'Hello there,'
@@ -139,7 +139,7 @@ def main
     number = gets.chomp
     puts number
 
-  case entry
+  case selection
     when '1'
       app.all_books
     when '2'
