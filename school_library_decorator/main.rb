@@ -7,7 +7,6 @@ require_relative './rental.rb'
 require_relative './student.rb'
 require_relative './teacher.rb'
 
-# To start the app Empty Arrays
 Class Main
   def initialize
   @books = []
@@ -27,7 +26,46 @@ Class Main
 def all_people; end
 
 # To create person create_person method:
-def create_person; end
+def create_person
+  puts 'Do you want to create a student (1) or a teacher (2)?'
+  print 'Select (1) or (2)'
+  print ' '
+  selection = gets.chomp
+
+  case selection
+  when '1'
+    print 'Age: '
+    age = gets.chomp
+
+    print 'Name: '
+    name = gets.chomp
+
+    print 'Has parent permission? [Y/N]: '
+    permission = gets.chomp
+    permission = permission.downcase == 'y'
+
+    @people << Student.new(age, name, permission)
+
+    puts 'student created successfully'
+  when '2'
+    print 'Age: '
+    age = gets.chomp
+
+    print 'Name: '
+    name = gets.chomp
+
+    print 'Specialization: '
+    specialization = gets.chomp
+    @people << Teacher.new(age, specialization, name)
+
+    puts 'Teacher created successfully'
+
+  else
+    puts 'invalid selection'
+
+    nil
+  end
+end
 
 # To Create a book create_book method:
 def create_book; end
