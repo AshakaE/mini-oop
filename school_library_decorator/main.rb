@@ -59,7 +59,6 @@ class App
     else
       puts 'Invalid Enrty.'
       puts 'Select 1 for student and 2 for teacher'
-      nil
     end
   end
 
