@@ -1,14 +1,5 @@
-# Importing other files
-require_relative './book'
-require_relative './classroom'
-require_relative './corrector'
-require_relative './person'
-require_relative './rental'
-require_relative './student'
-require_relative './teacher'
-
 # Creating class to have blueprints for objects
-class Main
+class App
   def initialize
     @books = []
     @people = []
@@ -135,11 +126,11 @@ def main
     puts '6- List all Rentals for a given Person id.'
     puts '7- Exit.'
     puts 'Do you want to Create a Student or a teacher?'
-    puts 'Select 1 for teacher and select 2 for teacher.'
-    number = gets.chomp
-    puts number
+    puts 'Select 1 for student and select 2 for teacher.'
+    entry = gets.chomp
+    puts entry
 
-  case selection
+  case entry
     when '1'
       app.all_books
     when '2'
@@ -159,4 +150,4 @@ def main
   end
 end
 
-main
+main()
