@@ -1,3 +1,8 @@
+require_relative './student'
+require_relative './teacher'
+require_relative './book'
+require_relative './rental'
+
 # Creating class to have blueprints for objects
 class App
   def initialize
@@ -59,7 +64,6 @@ class App
     else
       puts 'Invalid Enrty.'
       puts 'Select 1 for student and 2 for teacher'
-      nil
     end
   end
 
@@ -109,28 +113,30 @@ class App
   end
 end
 
+def start_prompts
+  puts 'Hello there,'
+  puts 'Welcome to Basic UI of School Libraray App!'
+  puts 'Please choose an option by entering a number:'
+  puts '1- List all books.'
+  puts '2- List all People.'
+  puts '3- Create a Person.'
+  puts '4- Create a Book.'
+  puts '5- Create a Rental.'
+  puts '6- List all Rentals for a given Person id.'
+  puts '7- Exit.'
+end
+
 # To invoke main.rb
 def main
   app = App.new
   entry = nil
 
   while entry != '7'
-    puts 'Hello there,'
-    puts 'Welcome to Basic UI of School Libraray App!'
-    puts 'Please choose an option by entering a number:'
-    puts '1- List all books.'
-    puts '2- List all People.'
-    puts '3- Create a Person.'
-    puts '4- Create a Book.'
-    puts '5- Create a Rental.'
-    puts '6- List all Rentals for a given Person id.'
-    puts '7- Exit.'
-    puts 'Do you want to Create a Student or a teacher?'
-    puts 'Select 1 for student and select 2 for teacher.'
+    start_prompts
     entry = gets.chomp
     puts entry
 
-  case entry
+    case entry
     when '1'
       app.all_books
     when '2'
@@ -145,9 +151,9 @@ def main
       app.all_rentals
     when '7'
       puts 'Thank you for using the app!'
-  end
+    end
     puts "\n"
   end
 end
 
-main()
+main
