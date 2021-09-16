@@ -1,3 +1,5 @@
+# rubocop:disable Metrics/MethodLength
+# rubocop:disable Metrics/CyclomaticComplexity
 require_relative './student'
 require_relative './teacher'
 require_relative './book'
@@ -157,3 +159,5 @@ def main
 end
 
 main
+# rubocop: enable Metrics/MethodLength
+# rubocop: enable Metrics/CyclomaticComplexity
