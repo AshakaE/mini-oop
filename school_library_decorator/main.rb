@@ -24,7 +24,7 @@ class App
 
   # To list all people all_people method:
   def all_people
-    if @books.length.positive?
+    if @people.length.positive?
       @people.each do |person|
         puts "name: #{person.name}, age: #{person.age}, id: #{person.id}"
       end
@@ -47,7 +47,11 @@ class App
       puts 'age: '
       age = gets.chomp
 
-      @people << Student.new(name, age)
+      print 'Do you have parent permission?'
+      permission = gets.chomp
+      permission = permission.downcase == 'Y'
+
+      @people << Student.new(name, age, permission)
 
       puts 'Student has been created successfully'
     when '2'
