@@ -50,7 +50,7 @@ def main
     when '4'
       app.books = Book.create_book
     when '5'
-      @rental << Rental.create_rental
+      @rental << Rental.create_rental(app.books,app.people)
     when '6'
       Rental.all_rentals(app.rentals)
     when '7'
