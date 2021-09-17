@@ -74,37 +74,9 @@ class App
   end
 
   # To Create a book create_book method:
-  def create_book
-    print 'title: '
-    title = gets.chomp
-
-    print 'author: '
-    author = gets.chomp
-
-    @books << Book.new(title, author)
-    puts 'Book has been created successfully'
-  end
-
+  @books << Book.create_book
   # To Create a rental create_rental method:
-  def create_rental
-    puts 'Please select a book from the folowing list'
-    @books.each_with_index do |book, index|
-      puts "#{index}) title: '#{book.title}', author: #{book.author}"
-    end
-    book_index = gets.chomp.to_i
-
-    puts 'Please select a person from the following list'
-    @people.each_with_index do |person, index|
-      puts "#{index}) [#{person.class}] name: #{person.name}, age: #{person.age}, id: #{person.id}"
-    end
-    person_index = gets.chomp.to_i
-
-    print 'date: '
-    date = gets.chomp
-
-    @rentals << Rental.new(date, @books[book_index], @people[person_index])
-    puts 'Rental created successfully'
-  end
+  @rentals << Rental.create_rental
 
   # To show all rentals all_rentals method:
   def all_rentals
@@ -144,7 +116,7 @@ def main
 
     case entry
     when '1'
-      app.all_books
+      Book.all_books(@books)
     when '2'
       app.all_people
     when '3'
