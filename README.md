@@ -27,6 +27,11 @@
 - GitHub: [@Arslan Bisharat](https://github.com/ArslanBisharat)
 - LinkedIn: [Arslan Bisharat](https://www.linkedin.com/in/ArslanBisharat)
 
+👤 **Samrood Ali**
+
+- GitHub: [@Samrood](https://github.com/SamroodAli)
+- LinkedIn: [Samrood Ali](https://www.linkedin.com/in/samrood-ali/)
+
 ## 🤝 Contributing
 
 Contributions, issues and, feature requests are welcome!
