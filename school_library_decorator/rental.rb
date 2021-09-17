@@ -34,11 +34,11 @@ class Rental
   end
 
 
-  def all_rentals
+  def all_rentals(rentals)
     print 'id: '
     id = gets.chomp.to_i
 
-    rentals = @rentals.filter { |rental| rental.person.id == id }
+    rentals = rentals.filter { |rental| rental.person.id == id }
     puts 'rentals:'
     rentals.each do |rental|
       puts "book '#{rental.book.title}' by #{rental.book.author}, date: #{rental.date}"

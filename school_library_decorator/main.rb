@@ -13,9 +13,6 @@ class App
     @rentals = []
   end
 
-  @books << Book.create_book
-  @rentals << Rental.create_rental
-
 end
 
 def start_prompts
@@ -52,9 +49,9 @@ def main
     when '4'
       @book = Book.create_book
     when '5'
-      app.create_rental
+      @rental << Rental.create_rental
     when '6'
-      app.all_rentals
+      Rental.all_rentals(@rentals)
     when '7'
       puts 'Thank you for using the app!'
     end
