@@ -13,7 +13,7 @@ class Rental
     person.rentals << self
   end
 
-  def self.create_rental(books,people)
+  def self.create_rental(books, people)
     puts 'Please select a book from the folowing list'
     books.each_with_index do |book, index|
       puts "#{index}) title: '#{book.title}', author: #{book.author}"
@@ -32,7 +32,6 @@ class Rental
     puts 'Rental created successfully'
     Rental.new(date, books[book_index], people[person_index])
   end
-
 
   def self.all_rentals(rentals)
     print 'id: '

@@ -52,7 +52,6 @@ class Person
       permission = gets.chomp
       permission = permission.downcase == 'Y'
 
-      
       puts 'Student has been created successfully'
       Student.new(name, age, permission)
     when '2'
@@ -64,7 +63,7 @@ class Person
 
       print 'subject: '
       subject = gets.chomp
-      
+
       puts 'Teacher has been created successfully'
       Teacher.new(name, age, subject)
     else

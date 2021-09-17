@@ -7,13 +7,13 @@ require_relative './rental'
 
 # Creating class to have blueprints for objects
 class App
-  attr_accessor :books,:people,:rentals
+  attr_accessor :books, :people, :rentals
+
   def initialize
     @books = []
     @people = []
     @rentals = []
   end
-
 end
 
 def start_prompts
@@ -50,7 +50,7 @@ def main
     when '4'
       app.books = Book.create_book
     when '5'
-      @rental << Rental.create_rental(app.books,app.people)
+      @rental << Rental.create_rental(app.books, app.people)
     when '6'
       Rental.all_rentals(app.rentals)
     when '7'
