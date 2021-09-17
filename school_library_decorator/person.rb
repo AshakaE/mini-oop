@@ -54,7 +54,7 @@ class Person
 
       
       puts 'Student has been created successfully'
-      @people << Student.new(name, age, permission)
+      Student.new(name, age, permission)
     when '2'
       print 'name: '
       name = gets.chomp
@@ -66,7 +66,7 @@ class Person
       subject = gets.chomp
       
       puts 'Teacher has been created successfully'
-      @people << Teacher.new(name, age, subject)
+      Teacher.new(name, age, subject)
     else
       puts 'Invalid Enrty.'
       puts 'Select 1 for student and 2 for teacher'
