@@ -25,6 +25,53 @@ class Person
     Rental.new(self, date, person)
   end
 
+  def self.all_people(people)
+    if people.length.positive?
+      people.each do |person|
+        puts "name: #{person.name}, age: #{person.age}, id: #{person.id}"
+      end
+    else
+      puts 'Sorry! cannot find person'
+    end
+  end
+
+  def self.create_person
+    puts 'Do you want to create a student or a teacher?'
+    puts 'For student press 1 and for teacher press 2'
+    entry = gets.chomp
+
+    case entry
+    when '1'
+      puts 'name: '
+      name = gets.chomp
+
+      puts 'age: '
+      age = gets.chomp
+
+      print 'Do you have parent permission?'
+      permission = gets.chomp
+      permission = permission.downcase == 'Y'
+
+      puts 'Student has been created successfully'
+      Student.new(name, age, permission)
+    when '2'
+      print 'name: '
+      name = gets.chomp
+
+      print 'age: '
+      age = gets.chomp
+
+      print 'subject: '
+      subject = gets.chomp
+
+      puts 'Teacher has been created successfully'
+      Teacher.new(name, age, subject)
+    else
+      puts 'Invalid Enrty.'
+      puts 'Select 1 for student and 2 for teacher'
+    end
+  end
+
   private
 
   def of_age?
