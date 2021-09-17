@@ -7,6 +7,7 @@ require_relative './rental'
 
 # Creating class to have blueprints for objects
 class App
+  attr_accessor :books,:people,:rentals
   def initialize
     @books = []
     @people = []
@@ -40,18 +41,18 @@ def main
 
     case entry
     when '1'
-      Book.all_books(@books)
+      Book.all_books(app.books)
     when '2'
-      Person.all_books(@people)
+      Person.all_people(app.people)
     when '3'
       new_person = Person.create_person
-      @people << new_person if new_person
+      app.people << new_person if new_person
     when '4'
-      @book = Book.create_book
+      app.books = Book.create_book
     when '5'
       @rental << Rental.create_rental
     when '6'
-      Rental.all_rentals(@rentals)
+      Rental.all_rentals(app.rentals)
     when '7'
       puts 'Thank you for using the app!'
     end
