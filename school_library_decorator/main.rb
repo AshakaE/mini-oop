@@ -13,82 +13,9 @@ class App
     @rentals = []
   end
 
-  # To show all books all_books method:
-  def all_books
-    if @books.length.positive?
-      @books.each { |book| puts "title: #{book.title}, Author: #{book.author}" }
-    else
-      puts 'Sorry! Cannot find any book.'
-    end
-  end
-
-  # To list all people all_people method:
-  def all_people
-    if @people.length.positive?
-      @people.each do |person|
-        puts "name: #{person.name}, age: #{person.age}, id: #{person.id}"
-      end
-    else
-      puts 'Sorry! cannot find person'
-    end
-  end
-
-  # To create person create_person method
-  def create_person
-    puts 'Do you want to create a student or a teacher?'
-    puts 'For student press 1 and for teacher press 2'
-    entry = gets.chomp
-
-    case entry
-    when '1'
-      puts 'name: '
-      name = gets.chomp
-
-      puts 'age: '
-      age = gets.chomp
-
-      print 'Do you have parent permission?'
-      permission = gets.chomp
-      permission = permission.downcase == 'Y'
-
-      @people << Student.new(name, age, permission)
-
-      puts 'Student has been created successfully'
-    when '2'
-      print 'name: '
-      name = gets.chomp
-
-      print 'age: '
-      age = gets.chomp
-
-      print 'subject: '
-      subject = gets.chomp
-      @people << Teacher.new(name, age, subject)
-
-      puts 'Teacher has been created successfully'
-
-    else
-      puts 'Invalid Enrty.'
-      puts 'Select 1 for student and 2 for teacher'
-    end
-  end
-
-  # To Create a book create_book method:
   @books << Book.create_book
-  # To Create a rental create_rental method:
   @rentals << Rental.create_rental
 
-  # To show all rentals all_rentals method:
-  def all_rentals
-    print 'id: '
-    id = gets.chomp.to_i
-
-    rentals = @rentals.filter { |rental| rental.person.id == id }
-    puts 'rentals:'
-    rentals.each do |rental|
-      puts "book '#{rental.book.title}' by #{rental.book.author}, date: #{rental.date}"
-    end
-  end
 end
 
 def start_prompts
@@ -118,11 +45,12 @@ def main
     when '1'
       Book.all_books(@books)
     when '2'
-      app.all_people
+      Person.all_books(@people)
     when '3'
-      app.create_person
+      new_person = Person.create_person
+      @people << new_person if new_person
     when '4'
-      app.create_book
+      @book = Book.create_book
     when '5'
       app.create_rental
     when '6'

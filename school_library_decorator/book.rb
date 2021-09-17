@@ -29,5 +29,4 @@ class Book
       puts 'Sorry! Cannot find any book.'
     end
   end
-
 end

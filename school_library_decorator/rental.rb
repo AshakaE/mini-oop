@@ -32,4 +32,16 @@ class Rental
     puts 'Rental created successfully'
     Rental.new(date, @books[book_index], @people[person_index])
   end
+
+
+  def all_rentals
+    print 'id: '
+    id = gets.chomp.to_i
+
+    rentals = @rentals.filter { |rental| rental.person.id == id }
+    puts 'rentals:'
+    rentals.each do |rental|
+      puts "book '#{rental.book.title}' by #{rental.book.author}, date: #{rental.date}"
+    end
+  end
 end
